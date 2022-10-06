@@ -61,7 +61,7 @@ goloop rpc sendtx deploy ./hello-world/build/libs/hello-world-0.1.0-optimized.ja
 "0x377553162e6589be1bfa246c3fdb70fd9273aa2b5a9ff6973cb7038307b8602d"
 #+END_SRC
 
-** Verify
+** Get transaction detail
 *** Input
 #+BEGIN_SRC bash
 goloop rpc \
