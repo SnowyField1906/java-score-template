@@ -1,8 +1,8 @@
 #+Title: Java SCORE template
-#+AUTHOR: Nguyen Huu Thuan (SnowyField1906)
+#+AUTHOR: Nguyen Huu Thuan
 
 *Java SCORE (ICON blockchain's smart contract) from scratch.*
-
+/Nguyen Huu Thuan (SnowyField1906)/
 ------
 
 * A. Setup *ICON local network*
