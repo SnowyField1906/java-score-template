@@ -1,51 +1,54 @@
 #+Title: Java SCORE template
-#+subtitle: Java SCORE (ICON blockchain's smart contract) from scratch
 #+AUTHOR: Nguyen Huu Thuan (SnowyField1906)
 
+*Java SCORE (ICON blockchain's smart contract) from scratch.*
 
-* Setup ICON local network
-** Docker
-*** Docker-ce
-*** Docker-compose
+------
 
-** Go
+* A. Setup *ICON local network*
+** 1. Docker
+    - Docker-ce
+    - Docker-compose
 
-** Ubuntu libs
+** 2. Go
+
+** 3. Ubuntu libs
 *** for C++
-**** g++
-*** for golang
-**** libsnappy-dev
-**** libbz2-dev
-**** libz-dev
-*** rocksdb
+    - g++
+*** for Golang
+    - libsnappy-dev
+    - libbz2-dev
+    - libz-dev
+*** Rocksdb
 
-** Goloop and gochain-icon-image
-+ A blockchain node written with Go
+** 4. Goloop and Gochain-icon-image
+    /A blockchain node written with Go/
 
-** Gochain-local
-+ Helper scripts to run gochain docker container as a local network
+** 5. Gochain-local
+    /Helper scripts to run gochain docker container as a local network/
 
-** Goloop CLI
-*** OpenJDK11
-*** Goloop
+** 6. Goloop CLI
+    - OpenJDK11
+    - Goloop
+
+------
 
 
-
-* Build the sample smart contract
-** Start `Goloop` local node
+* B. Build the sample smart contract
+** 1. Start ~Goloop~ local node
 #+BEGIN_SRC bash
 cd gochain-local
 sudo ./run_gochain.sh start
 export PATH=$PATH:/$HOME/goloop/bin
 #+END_SRC
 
-** Build and optimize the jar
+** 2. Build and optimize the jar
 #+BEGIN_SRC bash
 sudo ./gradlew build
 sudo ./gradlew optimizedJar
 #+END_SRC
 
-** Deploy the optimized jar
+** 3. Deploy the optimized jar
 *** Input
 #+BEGIN_SRC bash
 goloop rpc sendtx deploy ./hello-world/build/libs/hello-world-0.1.0-optimized.jar \
@@ -61,7 +64,7 @@ goloop rpc sendtx deploy ./hello-world/build/libs/hello-world-0.1.0-optimized.ja
 "0x377553162e6589be1bfa246c3fdb70fd9273aa2b5a9ff6973cb7038307b8602d"
 #+END_SRC
 
-** Get transaction detail
+** 4. Get transaction detail
 *** Input
 #+BEGIN_SRC bash
 goloop rpc \
@@ -86,7 +89,7 @@ goloop rpc \
 }
 #+END_SRC
 
-** Call to contract (method `getGreeting`)
+** 5. Call to contract (method ~getGreeting~)
 *** Input
 #+BEGIN_SRC bash
 goloop rpc \
@@ -100,7 +103,7 @@ goloop rpc \
 "Hello Sample!"
 #+END_SRC
 
-** Send to contract (method `setName`)
+** 6. Send to contract (method ~setName~)
 *** Input
 #+BEGIN_SRC bash
 goloop rpc sendtx call \
@@ -117,3 +120,7 @@ goloop rpc sendtx call \
 #+BEGIN_SRC bash
 "0x57404eea011050fca1c97f21e67754985cec645463d5b81fa46e44442b06e448"
 #+END_SRC
+
+------
+
+References: *Devera Academy* & *ICON Network*
