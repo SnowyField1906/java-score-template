@@ -3,7 +3,7 @@
 
 =Title= *Java SCORE (ICON blockchain's smart contract) from scratch*
 
-=Author= /Nguyen Huu Thuan (SnowyField1906)/
+=Author= /Huu Thuan Nguyen (SnowyField1906)/
 
 =References= *Devera Academy* & *ICON Network*
 
