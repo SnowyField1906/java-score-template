@@ -1,35 +1,39 @@
 #+Title: Java SCORE template
-#+AUTHOR: Nguyen Huu Thuan (SnowyField1906)
+#+AUTHOR: Nguyen Huu Thuan
 
-*Java SCORE (ICON blockchain's smart contract) from scratch.*
+=Title= *Java SCORE (ICON blockchain's smart contract) from scratch*
+
+=Author= /Huu Thuan Nguyen (SnowyField1906)/
+
+=References= *Devera Academy* & *ICON Network*
 
 ------
 
 * A. Setup *ICON local network*
 ** 1. Docker
-    - Docker-ce
-    - Docker-compose
+    - =Docker-ce=
+    - =Docker-compose=
 
-** 2. Go
+** 2. =Go=
 
 ** 3. Ubuntu libs
-*** for C++
-    - g++
-*** for Golang
-    - libsnappy-dev
-    - libbz2-dev
-    - libz-dev
-*** Rocksdb
+*** C++
+    - =g++=
+*** Golang
+    - =libsnappy-dev=
+    - =libbz2-dev=
+    - =libz-dev=
+*** =Rocksdb=
 
-** 4. Goloop and Gochain-icon-image
+** 4. =Goloop= and =Gochain-icon-image=
     /A blockchain node written with Go/
 
-** 5. Gochain-local
+** 5. =Gochain-local=
     /Helper scripts to run gochain docker container as a local network/
 
 ** 6. Goloop CLI
-    - OpenJDK11
-    - Goloop
+    - =OpenJDK11=
+    - =Goloop=
 
 ------
 
@@ -89,7 +93,7 @@ goloop rpc \
 }
 #+END_SRC
 
-** 5. Call to contract (method ~getGreeting~)
+** 5. Call to ~getGreeting~ method
 *** Input
 #+BEGIN_SRC bash
 goloop rpc \
@@ -103,7 +107,7 @@ goloop rpc \
 "Hello Sample!"
 #+END_SRC
 
-** 6. Send to contract (method ~setName~)
+** 6. Send to contract ~setName~ method
 *** Input
 #+BEGIN_SRC bash
 goloop rpc sendtx call \
@@ -120,7 +124,3 @@ goloop rpc sendtx call \
 #+BEGIN_SRC bash
 "0x57404eea011050fca1c97f21e67754985cec645463d5b81fa46e44442b06e448"
 #+END_SRC
-
-------
-
-References: *Devera Academy* & *ICON Network*
