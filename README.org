@@ -107,7 +107,7 @@ goloop rpc \
 "Hello Sample!"
 #+END_SRC
 
-** 6. Send to contract ~setName~ method
+** 6. Send to ~setName~ method
 *** Input
 #+BEGIN_SRC bash
 goloop rpc sendtx call \
